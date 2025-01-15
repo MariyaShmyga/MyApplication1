@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Категория настроек: Общие -->
+    <PreferenceCategory
+        android:title="Общие"
+        android:layout="@layout/custom_preference_category">
+
+        <!-- Тёмная тема -->
+        <SwitchPreferenceCompat
+            android:key="dark_theme"
+            android:title="Тёмная тема"
+            android:summary="Включить или выключить тёмный режим приложения"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false" />
+
+        <!-- Звук уведомлений -->
+        <SwitchPreferenceCompat
+            android:key="notification_sound"
+            android:title="Звук уведомлений"
+            android:summary="Включить или отключить звук уведомлений"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <!-- Категория настроек: Политики -->
+    <PreferenceCategory
+        android:title="Политики"
+        android:layout="@layout/custom_preference_category">
+
+        <!-- Политика конфиденциальности -->
+        <Preference
+            android:key="privacy_policy"
+            android:title="Политика конфиденциальности"
+            android:summary="Ознакомьтесь с нашей политикой конфиденциальности"
+            app:iconSpaceReserved="false" />
+
+        <!-- Связь с поддержкой -->
+        <Preference
+            android:key="contact_support"
+            android:title="Связь с поддержкой"
+            android:summary="Отправьте сообщение в службу поддержки"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Название курса -->
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:paddingBottom="4dp" />
+
+        <!-- Цена курса -->
+        <TextView
+            android:id="@+id/course_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_text"
+            android:paddingBottom="4dp" />
+
+        <!-- Количество -->
+        <TextView
+            android:id="@+id/course_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_text" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
