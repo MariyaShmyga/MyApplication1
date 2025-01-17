@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/topicInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Тема занятия" />
+
+    <EditText
+        android:id="@+id/hoursInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Количество часов"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/materialsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Материалы" />
+
+    <EditText
+        android:id="@+id/optionalPropertiesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Дополнительная информация (необязательно)" />
+</LinearLayout>

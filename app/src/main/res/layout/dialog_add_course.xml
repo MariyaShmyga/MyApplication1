@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/customDataContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/courseNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Название курса" />
+
+            <EditText
+                android:id="@+id/courseLanguageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Язык курса" />
+
+            <EditText
+                android:id="@+id/courseDifficultyInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Сложность курса" />
+
+            <EditText
+                android:id="@+id/coursePriceInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Цена курса"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/startDateInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Дата начала курса (dd-MM-yyyy)"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/durationMonthsInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Продолжительность (мес)"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/ImgUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Продолжительность (мес)"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/addCustomDataButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить занятие" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
