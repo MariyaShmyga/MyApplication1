@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Price"
             android:textSize="16sp"
-            android:textColor="@color/secondary_text"
+            android:textColor="@color/primary_text"
             android:paddingBottom="4dp" />
 
         <!-- Количество -->
@@ -41,9 +41,9 @@
             android:id="@+id/course_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quantity"
+            android:text="Количество"
             android:textSize="16sp"
-            android:textColor="@color/secondary_text" />
+            android:textColor="@color/primary_text" />
 
     </LinearLayout>
 

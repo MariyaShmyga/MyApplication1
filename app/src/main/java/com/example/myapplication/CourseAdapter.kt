@@ -3,11 +3,13 @@ package com.example.myapplication
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class CourseAdapter(
-    private val courses: List<Course>,
+    private var courses: List<Course>,
     private val onClick: (Course) -> Unit
 ) : RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
 
@@ -23,16 +25,30 @@ class CourseAdapter(
 
     override fun getItemCount(): Int = courses.size
 
+    // Метод для обновления списка
+    fun updateList(newCourses: List<Course>) {
+        courses = newCourses
+        notifyDataSetChanged()
+    }
+
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         private val priceTextView: TextView = itemView.findViewById(R.id.priceTextView)
         private val startDateTextView: TextView = itemView.findViewById(R.id.startDateTextView)
+        private val courseImageView: ImageView = itemView.findViewById(R.id.courseImageView)
 
         fun bind(course: Course, onClick: (Course) -> Unit) {
             titleTextView.text = course.name
             priceTextView.text = "$${course.price}"
             startDateTextView.text = "Starts: ${course.startDateTime.toLocalDate()}"
             itemView.setOnClickListener { onClick(course) }
+
+            // Загрузка изображения через Picasso
+            Picasso.get()
+                .load(course.imageUrl)
+//                .placeholder(R.drawable.placeholder) // Замените на ресурс-заглушку
+//                .error(R.drawable.error_placeholder) // Замените на ресурс ошибки
+                .into(courseImageView)
         }
     }
 }

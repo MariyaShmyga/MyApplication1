@@ -3,30 +3,32 @@
 
     <!-- Категория настроек: Общие -->
     <PreferenceCategory
-        android:title="Общие"
-        android:layout="@layout/custom_preference_category">
+        android:background="@color/background_color"
+
+        android:title="Общие настройки">
 
         <!-- Тёмная тема -->
         <SwitchPreferenceCompat
-            android:key="dark_theme"
-            android:title="Тёмная тема"
-            android:summary="Включить или выключить тёмный режим приложения"
             android:defaultValue="false"
+            android:key="dark_theme"
+            android:summary="Включить или выключить тёмный режим приложения"
+            android:title="Тёмная тема"
             app:iconSpaceReserved="false" />
 
         <!-- Звук уведомлений -->
         <SwitchPreferenceCompat
-            android:key="notification_sound"
-            android:title="Звук уведомлений"
-            android:summary="Включить или отключить звук уведомлений"
             android:defaultValue="true"
+            android:key="notification_sound"
+            android:summary="Включить или отключить звук уведомлений"
+            android:title="Звук уведомлений"
             app:iconSpaceReserved="false" />
     </PreferenceCategory>
 
     <!-- Категория настроек: Политики -->
     <PreferenceCategory
         android:title="Политики"
-        android:layout="@layout/custom_preference_category">
+        >
+
 
         <!-- Политика конфиденциальности -->
         <Preference

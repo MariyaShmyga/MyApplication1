@@ -31,7 +31,7 @@
                 android:id="@+id/profileImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/circle_background"
+                android:src="@drawable/person"
                 android:contentDescription="@string/material_motion_easing_accelerated"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/circle_background"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:text="johndoe@example.com"
                 android:textSize="16sp"
-                android:textColor="@color/secondary_text" />
+                android:textColor="@color/primary_text" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

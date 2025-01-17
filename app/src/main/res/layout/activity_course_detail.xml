@@ -7,17 +7,18 @@
     android:padding="16dp"
     android:background="@color/background_color">
 
-    <!-- Кнопка "Назад" -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:backgroundTint="@color/secondary_color"
+        android:backgroundTint="@color/white"
         android:backgroundTintMode="multiply"
         android:text="Назад"
-        android:textColor="@android:color/white"
+        android:textColor="@color/primary_text"
         android:textSize="14sp"
+        android:drawableStart="@drawable/keyboard_backspace"
+        android:drawablePadding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -85,4 +85,5 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("com.google.code.gson:gson:2.10")
     implementation("com.google.android.material:material:1.9.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
 }

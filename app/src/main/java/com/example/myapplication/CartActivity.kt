@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -34,6 +35,25 @@ class CartFragment : Fragment() {
         cartViewModel.cartItems.observe(viewLifecycleOwner) { items ->
             cartAdapter.submitList(items.toList())
             binding.totalPrice.text = "${cartViewModel.getTotalPrice()} USD"
+        }
+
+//        binding.buyButton.setOnClickListener {
+//            if (cartViewModel.cartItems.value.isNullOrEmpty()) {
+//                Toast.makeText(requireContext(), "Корзина пуста", Toast.LENGTH_SHORT).show()
+//            } else {
+//                cartViewModel.clearCart()
+//                Toast.makeText(requireContext(), "Поздравляем с покупкой!", Toast.LENGTH_LONG).show()
+//            }
+//        }
+        // Обработка нажатия кнопки "Купить"
+        binding.buyButton.setOnClickListener {
+            val cartItems = cartViewModel.cartItems.value ?: emptyList()
+            if (cartItems.isNotEmpty()) {
+                Toast.makeText(requireContext(), "Поздравляем с покупкой!", Toast.LENGTH_SHORT).show()
+                cartViewModel.clearCart()
+            } else {
+                Toast.makeText(requireContext(), "Ваша корзина пуста", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

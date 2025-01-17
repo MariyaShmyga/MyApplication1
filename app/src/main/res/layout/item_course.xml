@@ -15,6 +15,11 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/courseImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/titleTextView"
@@ -30,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Difficulty: Beginner"
+            android:text="Сложность: Beginner"
             android:textSize="16sp"
             android:textColor="@color/gray" />
         <TextView
@@ -38,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Price: $50"
+            android:text="Цена: $50"
             android:textSize="16sp"
             android:textColor="@color/gray" />
 
@@ -47,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Starts: 01 Feb 2025"
+            android:text="Начало: 01 Feb 2025"
             android:textSize="16sp"
             android:textColor="@color/gray" />
     </LinearLayout>
