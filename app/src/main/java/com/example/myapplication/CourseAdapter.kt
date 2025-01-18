@@ -33,12 +33,15 @@ class CourseAdapter(
 
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
+
         private val priceTextView: TextView = itemView.findViewById(R.id.priceTextView)
         private val startDateTextView: TextView = itemView.findViewById(R.id.startDateTextView)
         private val courseImageView: ImageView = itemView.findViewById(R.id.courseImageView)
+        private val difficultyTextView: TextView = itemView.findViewById(R.id.difficultyTextView)
 
         fun bind(course: Course, onClick: (Course) -> Unit) {
             titleTextView.text = course.name
+            difficultyTextView.text = "Сложность: ${course.difficulty}" // Уровень сложности
             priceTextView.text = "$${course.price}"
             startDateTextView.text = "Starts: ${course.startDateTime.toLocalDate()}"
             itemView.setOnClickListener { onClick(course) }

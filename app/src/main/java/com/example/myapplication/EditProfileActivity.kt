@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityEditProfileBinding
+import com.example.dialoglibrary.RubberEffectDialog
+
 
 class EditProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditProfileBinding
@@ -39,6 +41,20 @@ class EditProfileActivity : AppCompatActivity() {
                 Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // Обрабатываем кнопку отмены
+        binding.cancelButton.setOnClickListener {
+            val dialog = RubberEffectDialog.newInstance(
+                title = "Отмена редактирования",
+                message = "Вы уверены, что хотите отменить изменения?\nВыполненные действия будут потеряны.",
+                buttontext = "Да, подтвердить",
+                onConfirm = {
+                    finish() // Закрытие окна редактирования
+                }
+            )
+            dialog.show(supportFragmentManager, "CancelDialog")
+        }
+
     }
 }
 

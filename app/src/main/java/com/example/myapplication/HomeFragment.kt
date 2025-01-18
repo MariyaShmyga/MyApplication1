@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import CustomJsonParser
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.dialoglibrary.RubberEffectDialog
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -68,6 +70,9 @@ class HomeFragment : Fragment() {
             ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
         ).get(CartViewModel::class.java)
 
+        val jsonParser = CustomJsonParser()
+        jsonParser.testParser()
+
         // Загружаем список курсов
         //loadSampleCourses()
         courseList = loadCoursesFromFile()
@@ -91,6 +96,11 @@ class HomeFragment : Fragment() {
             }
             courseAdapter.updateList(filteredList)
         }
+
+//        binding.testDialogButton.setOnClickListener {
+//            val dialog = RubberEffectDialog()
+//            dialog.show(parentFragmentManager, "RubberEffectDialog")
+//        }
     }
 
     private fun loadCoursesFromFile(): List<Course> {

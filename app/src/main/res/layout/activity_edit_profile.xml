@@ -57,9 +57,24 @@
         android:layout_marginTop="16dp"
         android:background="@color/primary_color"
         android:text="Сохранить"
-        android:textColor="@color/secondary_text"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailInputLayout" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:foregroundTint="@color/secondary_color"
+        android:strokeWidth="5"
+        android:strokeColor="@color/secondary_color"
+        android:text="Отменить"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

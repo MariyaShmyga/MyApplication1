@@ -12,7 +12,7 @@ data class Course(
     var startDateTime: LocalDateTime,  // Дата и время начала курса
     var durationMonths: Int,           // Продолжительность в месяцах
     var description: List<CustomData> = emptyList(), // Подробности курса
-    var imageUrl: String // Новое поле для URL изображения
+    var imageUrl: String // URL изображения
 ): Serializable {
     fun endDate(): LocalDateTime {
         return startDateTime.plusMonths(durationMonths.toLong())
